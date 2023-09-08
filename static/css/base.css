@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Montserrat:wght@400;600&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+tr {
+  border: 1px solid #dddddd; /* Borde gris sólido */
+}
+
+.dataTables_scrollHead {
+  border: 1px solid #dddddd; /* Borde gris sólido */
+}
+
+td {
+  font-size: 12px;
+  border: 1px solid #ccc; /* Borde gris sólido */
+}
+
+th {
+  font-size: 12px;
+  min-width: 150px;
+}
+
+#miTabla_info {
+  font-size: 12px;
+}
+
+#miTabla_length {
+  font-size: 12px;
+}
+
+#miTabla_filter {
+  font-size: 12px;
+}
+
+#miTabla_paginate {
+  font-size: 12px;
+}
+
+.my-dropdown-class {
+  animation: fade-in 0.5s ease;
+  -webkit-animation: fade-in 0.5s ease;
+  -moz-animation: fade-in 0.5s ease;
+}
+
+
+/* hacer que el botón data toggle sea blanco */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Color fondo sweet alert */
+.swal2-container {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+.select2-container .select2-selection--single {
+  height: 42px;
+}

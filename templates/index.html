@@ -1,0 +1,18 @@
+{% extends './base.html' %}
+
+{% block title%} Index {% endblock %}
+
+{% block body %}
+<input type="text" value="Extraer" id="nombrePagina" style="display: none;"></input>
+<div class="row" id="bienvenido" style="margin-top: 50px; display: block;">
+    <div class="container mt-5 zoom-effect">
+        <div class="jumbotron text-center">
+            <h2 class="display-5">Welcome!</h2>
+            <p class="lead">Explore information about the countries of the world. I invite you to explore the application!</p>
+            <a class="btn btn-info btn-lg" href="{{ url_for('countries') }}" role="button">Start  <i class="fa-solid fa-rocket"></i></a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

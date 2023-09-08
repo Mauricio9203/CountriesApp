@@ -1,0 +1,84 @@
+{% extends './base.html' %} {% block title%} Countries {% endblock %} {% block
+body %}
+<input type="text" value="Countries" id="nombrePagina"></input>
+<div class="col-md-12 fa-3x  d-flex justify-content-center mt-4" >
+  <h6 class="text-primary" id="textoCargando" style="display: none;">Fetching countries, please wait...</h6></p>
+</div>
+<div class="col-md-12 fa-3x  d-flex justify-content-center"  >
+  <i class="fa-solid fa-circle-notch fa-spin text-primary" id="div_cargando" style="display: none;"></i>
+</div>
+
+
+<p class="h4 hide" style="margin-top: 20px;">1. Dashboard</p>
+<div class="dropdown-divider hide"></div>
+<div class="row hide">
+
+
+
+
+
+
+  <!--
+  <div class="fa-3x" id="cargando" style="display:block;"> 
+    <i class="fa-solid fa-sync fa-spin"></i>
+    <i class="fa-solid fa-cog fa-spin"></i>
+    <i class="fa-solid fa-cog fa-spin fa-spin-reverse"></i>
+    <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+    <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
+  </div>
+   -->
+
+  <div class="col-md-6 shadow-md  justify-content-center"  >
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div id="graficoPoblacion" style="width: auto; height: 300px;">
+            <row>
+              <div class="col-md-12 fa-3x  d-flex justify-content-center align-item-center"  >
+                <i class="fa-solid fa-circle-notch fa-spin text-primary" id="div_cargando" style="display: block;"></i>
+              </div>
+            </row>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 shadow-md  justify-content-center"  >
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div id="graficoArea" style="width: auto; height: 300px;">
+            <row>
+              <div class="col-md-12 fa-3x  d-flex justify-content-center align-item-center"  >
+                <i class="fa-solid fa-circle-notch fa-spin text-primary" id="div_cargando" style="display: block;"></i>
+              </div>
+            </row>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="h4 hide" style="margin-top: 20px;">2. Country Details</p>
+<div class="dropdown-divider hide"></div>
+
+
+
+
+  <div class="row hide justify-content-md-center">
+    <div class="col-md-6 text-center" style="margin-top: 20px;">
+      <button type="button" id="descargarExcel" class="btn btn-success btn-sm" style="display:none;"> <i class="fa-regular fa-file-excel"></i> Download Excel</button>
+    </div>
+  </div>
+
+
+
+<div style="display:none;" id="div_tabla" class="hide">
+  <div class="row d-flex justify-content-center "  style="overflow-x: auto;   -webkit-overflow-scrolling: touch; margin-top: 20px;">
+  
+    <div class="col-md-10 shadow p-3 mb-5 bg-body rounded">
+      <table id="miTabla" class="table">
+    </div>
+  </div>
+</div>
+
+<!--Asociar archivo script js de esta página-->
+<script src="{{ url_for('static', filename='js/countries.js') }}"></script>
+{% endblock %}
